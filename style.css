@@ -19,6 +19,7 @@ nav #left{
     font-family: "Outfit", sans-serif;
     font-weight: 600;
     display: flex;
+    align-items: center;
 }
 #mid-searchbar{
     height: 46px;
@@ -57,4 +58,44 @@ nav #left{
     margin-left: -90px;
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
+}
+#main{
+    text-align: center;
+    font-family: "Lexend", sans-serif;
+    font-weight: 900;
+    font-size: 44px;
+    margin-top: 20px;
+}
+#main img{
+    height: 21px;
+    width: 210px;
+    position: relative;
+    top: -41px;
+    z-index: -1;
+    left: 5px;
+}
+#main input{
+    height: 49px;
+    /* margin-top: -9px; */
+    position: relative;
+    top: -32px;
+    width: 73%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: none;
+    position: relative;
+    left: 16px;
+    padding-left: 47px;
+    font-size: 16px;
+}
+#main input:focus{
+    border-color: rgb(0, 0, 230);
+    border: none;
+}
+.fa-search{
+    font-size: 20px;
+    position: relative;
+    top: -28px;
+    left: -84%;
+    
+
 }

@@ -3,21 +3,7 @@
         margin-left: 28%;
     }
 }
-@media (max-width: 1000px){
-    #mid-searchbar{
-        display: none;
-    }
-    .fa-solid, .fas {
-        display: none;
-    }
-    #signin{
-        display: none;
-    }
-    nav{
-        display: flex;
-        justify-content: center;
-    }
-}
+
 @media (max-width: 1425px) and (min-width: 1260px) {
     #mid-searchbar {
         margin-left: 25%;
@@ -37,4 +23,50 @@
     #mid-searchbar{
         margin-left: 12%;
     }
+}
+@media (min-width: 1651px){
+    .fa-solid, .fas {
+        display: none;
+    }
+}
+
+
+@media (min-width: 1000px){
+    #threedots {
+        display: none;
+    }
+}
+@media (max-width: 1000px){
+    #mid-searchbar{
+        display: none;
+    }
+    .fa-solid, .fas {
+        display: none;
+    }
+    #signin{
+        display: none;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    nav #left{
+        font-size: 28px;
+    }
+    nav #left img{
+        height: 34px;
+    }
+    
+    .fa-solid, .fas {
+        display: inline-block;
+        color: white;
+        font-size: 22px;
+        margin-right: 14px;
+    }
+    .search-icon{
+        display: none;
+    }
+   
+  
+   
 }
