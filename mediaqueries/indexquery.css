@@ -1,0 +1,40 @@
+@media (min-width: 900px) {
+    #mid-searchbar{
+        margin-left: 28%;
+    }
+}
+@media (max-width: 1000px){
+    #mid-searchbar{
+        display: none;
+    }
+    .fa-solid, .fas {
+        display: none;
+    }
+    #signin{
+        display: none;
+    }
+    nav{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media (max-width: 1425px) and (min-width: 1260px) {
+    #mid-searchbar {
+        margin-left: 25%;
+    }
+}
+@media (max-width: 1315px) and (min-width: 1165px) {
+    #mid-searchbar{
+        margin-left: 22%;
+    }
+}
+@media (max-width: 1230px) and (min-width: 1147px) {
+    #mid-searchbar{
+        margin-left: 18%;
+    }
+}
+@media (max-width: 1147px) and (min-width: 1000px) {
+    #mid-searchbar{
+        margin-left: 12%;
+    }
+}
