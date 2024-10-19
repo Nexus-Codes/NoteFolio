@@ -250,7 +250,35 @@ nav #left{
     position: relative;
     left: 9px;
 }
-
+#main3{
+    margin-top: 40px;
+}
+#notefolio1{
+    color: black;
+    font-size: 35px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+    padding-left: 10px;
+}
+#description{
+    font-size: 13px;
+    font-family: "Noto Sans", sans-serif;
+    padding-left: 10px;
+    font-weight: 400;
+}
+#hr1{
+    margin-top: 35px;
+    border: 2px solid black;
+    width: 75%;
+    margin: auto;
+    position: relative;
+    top: 27px;
+}
+#footer{
+    font-size: 20px;
+    margin-top: 50px;
+    font-family: "Outfit", sans-serif;
+}
 
 
 
