@@ -173,6 +173,7 @@ nav #left{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    background-color: rgb(246, 253, 255);
 }
 .note .book-logo{
     height: 23px;
