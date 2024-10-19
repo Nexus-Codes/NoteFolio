@@ -170,9 +170,14 @@ nav #left{
     outline: none;
     border: none;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
-.note img{
+.note .book-logo{
     height: 23px;
+    margin-top: -73px;
+    margin-left: -30px;
 }
 .note .sub-name{
     font-size: 18px;
@@ -225,6 +230,24 @@ nav #left{
     top: 30px;
     left: -64px;
     display: inline;
+}
+.recent-notes{
+    font-size: 17px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    /* position: relative; */
+    /* top: -24px; */
+    left: 22px;
+    margin-top: -8px;
+    margin-left: 10px;
+}
+.pdf-img{
+    height: 103px;
+     /* margin-left: 34px; */
+}
+#first-book-logo{
+    position: relative;
+    left: 9px;
 }
 
 
