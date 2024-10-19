@@ -161,12 +161,15 @@ nav #left{
     margin-top: 40px;
 }
 .note{
-    border: 1px solid black;
-    height: 234px;
+    border: 2px solid black;
+    height: 100px;
     width: 300px;
-    
     margin-top: 18px;
     overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    outline: none;
+    border: none;
+    border-radius: 10px;
 }
 .note img{
     height: 23px;
@@ -182,7 +185,7 @@ nav #left{
     display: inline;
 
 }
-.fas.fa-file-alt{
+.fas.icon1{
     display: inline;
     margin-left: -100px;
     /* margin-top: 12px; */
