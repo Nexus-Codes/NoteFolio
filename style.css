@@ -91,14 +91,15 @@ nav #left{
 
 #main2{
     position: relative;
-    width:100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 #main2 input{
     position: absolute;
     height: 48px;
     width: 73%;
     margin: auto;
-    margin-left: 8%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border: none;
     padding-left: 37px;
@@ -111,7 +112,7 @@ nav #left{
 .fa-search{
     font-size: 20px;
     position: absolute;
-    left: 10%;
+    left: 30px;
     top: 14px;
     color: rgb(137, 137, 137);
 }
@@ -132,3 +133,18 @@ nav #left{
     font-size: 17px;
     font-weight: 700;
 }
+.fas.fa-search.search-icon{
+    left: 147px;
+    color: rgb(39, 39, 39);
+}
+.fas.fa-bars.hamburger-icon{
+    display: block;
+    color: white;
+    font-size: 28px;
+    /* margin-left: 24px; */
+    position: relative;
+    left: -10px;
+    align-items: center;
+    top: -5px;
+}
+
