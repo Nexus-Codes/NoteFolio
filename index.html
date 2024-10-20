@@ -54,12 +54,22 @@
 
     </div>
     <div id="searchbtn">
-        <button id="search">Search</button>
+        <button id="search" onclick="
+            localStorage.removeItem('login');
+            ">Search</button>
     </div>
     <br>
     <p id="recent-notes">Recent Notes</p>
     <div id="notes-container">
-        <div class="note">
+        <div class="note" onclick="
+        if (localStorage.getItem('login')) {
+           console.log('Redirecting to the notes...');
+        }
+        else {
+            window.location.href = 'login.html';
+        }
+        
+        ">
             <img src="images/book-removebg-preview.png" alt="" class="book-logo" id="first-book-logo">
             <p class="recent-notes">
                  C MATHS 
@@ -90,7 +100,7 @@
             <img src="images/pdf img.jpg" alt="" class="pdf-img">
         </div>
         <div class="note">
-            <img src="images/book-removebg-preview.png" alt="" class="book-logo">
+            <img src="images/book-removebg-preview.png" alt="" class="book-logo" id="book-logo2">
             <p class="recent-notes">O MATHS <br>&nbsp;&nbsp;&nbsp;&nbsp; Trigonometry <br> &nbsp;&nbsp;&nbsp;&nbsp;34 Pages</p>
             <img src="images/pdf img.jpg" alt="" class="pdf-img">
         </div>
