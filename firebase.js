@@ -52,7 +52,7 @@ function checkValueValidation() {
                 Password: password
             })
             .then(() => {
-                alert('Account Created created sucessfully!');
+                alert('Account created sucessfully!');
             })
             .catch(() => {
                 alert('Failed to check username availability.');

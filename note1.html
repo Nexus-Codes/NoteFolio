@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Note 1</title>
   </head>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -54,36 +54,130 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prociono&display=swap" rel="stylesheet">
 <body>
     <nav>
       <div id="left">
         <img src="images/logo.jpg" alt="img" id="logo-n" />
         <p id="notefolio">NoteFolio</p>
+        <i class="fas fa-bars hamburger-icon" id="threedots"></i>
       </div>
     </nav>
-
     <div id="main">
-        <p id="login-title">Log into NoteFolio</p>
-
+        <p id="topic">Science <br>Honey Bee</p>
+        <div id="pdf">.pdf</div>
+        <div id="secondary-fills">
+        <i class='fas fa-user-alt'></i>
+        <p id="user-views">12</p></div>
     </div>
-        <div id="input-boxes">
-          <div class="input-bar">
-            <label for="username">Username</label>  
-              <br>  <input type="text" id="username-box">
-          </div>
-          <div class="input-bar">
-            <label for="password">Password</label>  
-             <br><input type="password" id="pass-box">
-          </div>
-        </div>
-      </div>
-      <div id="btn-container">
-        <button id="login">Log in</button>
-      </div>
-      <div id="forgetpass">
-       <a href="create-account.html">Create an Account?</a> <p id="need-help"> <span>Need help?</span> <a href="">Contact us.</a></p>
-      </div>
-  </body>
+    <div id="download-btn">
+        <button id="download">
+            <i class="fa fa-download"></i>
+            Download</button>
+    </div>
+
+    <div id="review-btns">
+        <button id="helpful" class="review-btn"> 
+            <i class="fa-solid fa-thumbs-up" id="thumbs-up"></i>
+           <p id="helpful-p"> Helpful</p></button>
+
+        <button id="unhelpful" class="review-btn">
+            <i class="fa-solid fa-thumbs-down" id="thumbs-down"></i>
+          <p id="unhelpful-p">  Unhelpful</p></button>
+    </div>
+   
+
+ 
+    
+<style>
+    .fa-solid{
+        color: #989494;
+    }
+    #unhelpful-p{
+        display: contents;
+    }
+    #helpful-p{
+        display: contents;
+    }
+    #unhelpful{
+        margin-left: 5px;
+    }
+    .review-btn{
+        height: 34px;
+    width: 103px;
+    background-color: #f0ededfb;
+    border: none;
+    font-size: 15px;
+    border-radius: 5px;
+    }
+    #review-btns{
+        margin-top: 80px;
+        margin-left: 4%;
+    }
+    #download{
+        left: 4%;
+    position: absolute;
+    height: 36px;
+    width: 102px;
+    font-size: 15px;
+    background-color: yellow;
+    border: none;
+    }
+    #download-btn{
+        margin-top: 23px;
+    }
+    #secondary-fills{
+        margin-left: 76%;
+    border: 1px solid black;
+    width: 26px;
+    margin-left: 76%;
+    border: 1px solid black;
+    width: 32px;
+    height: 28px;
+    margin-top: 13px;
+    border-radius: 8px;
+    display: flex;
+    background-color: #f0eeee;
+    border: 1px solid #f0eeee;
+
+    }
+    #user-views{
+        margin-top: 2px;
+    /* margin-left: 33%; */
+    font-size: 14px;
+    color: #538aea;
+    }
+    .fas.fa-user-alt{
+        font-size: 9px;
+    margin-left: 9%;
+    margin-top: 8px;
+    color: #538aea;
+    }
+    #pdf{
+        border: 1px solid black;
+    height: 22px;
+    width: 45px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-radius: 17px;
+    background-color: #709fee;
+    border: none;
+    color: white;
+    font-size: 13px;
+    position: absolute;
+    right: 30%;
+    top: 115px;
+    }
+    .fas.fa-bars.hamburger-icon{
+        margin-left: 92%;
+    margin-top: 6px;
+    font-size: 22px;
+    position: absolute;
+    }
+</style> 
   <script type="module">
     // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
@@ -116,116 +210,41 @@ const db = getDatabase();
 
  
 
- 
+function helpfulBtnClick() { 
+    document.getElementById('helpful').style.backgroundColor = '#635e00';
+    document.getElementById('helpful').style.color = 'white';
+    document.getElementById('unhelpful').style.backgroundColor = '#f0ededfb';
+    document.getElementById('unhelpful-p').style.color = 'black';
+    document.getElementById('thumbs-up').style.color = 'white';
+    document.getElementById('thumbs-down').style.color = '#989494';
+   
+}
+document.getElementById('helpful').addEventListener('click', helpfulBtnClick);  
 
-function checkingLoginValidation() { 
-  
-  const username = document.getElementById('username-box').value.trim();
-const password = document.getElementById('pass-box').value.trim();
+function unhelpfulBtnClick() {
+    document.getElementById('unhelpful').style.backgroundColor = '#635e00';
+    document.getElementById('unhelpful').style.color = 'white';
+    document.getElementById('unhelpful-p').style.color = 'white'; 
+    document.getElementById('helpful').style.backgroundColor = '#f0ededfb';
+    document.getElementById('helpful').style.color = 'black';
+    document.getElementById('thumbs-up').style.color = '#989494';
+}
 
-const userRef = ref(db, `Accounts/${username}`);
-
- get(userRef).then((snapshot) => {
-      if (snapshot.exists()) {
-          const userData = snapshot.val();
-          console.log("User Data:", userData);
-            if (userData.Password === password) {
-            alert('Login Sucessfull!');
-            localStorage.setItem('login', 'true');
-          }
-            else{
-            alert('Incorrect Password!');
-          }
-        }
-    else{
-      alert('Incorrect Username!')
-    }
-      })
-    }
-
-document.getElementById('login').addEventListener('click', checkingLoginValidation);
+document.getElementById('unhelpful').addEventListener('click', unhelpfulBtnClick);
 
   </script>
   <style>
-    #need-help span{
-      color: black;
-    }
-    #need-help{
-      margin-top: 8px;
-    }
-    #forgetpass a{
-      text-decoration: none;
-      color: #156dd4;
-    }
-    #forgetpass{
-      font-size: 14px;
-    color: blue;
-    text-align: center;
-    margin-top: 14px;
-    font-family: "Mulish", sans-serif;
-    }
-    #btn-container{
-      display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 23px;
-    }
-    #login{
-      height: 44px;
-    width: 90%;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 3px;
-    background-color: #22b99a;
-    border: none;
-    color: white;
-    }
-    .input-bar label {
-    display: block;
-    margin-bottom: 5px; /* Space between label and input */
-    font-weight: 500;
-    text-align: left; /* Align label to the left */
-    width: 90%; /* Same width as input field */
-    margin-left: auto; /* Center-align both label and input */
-    margin-right: auto;
-  }
- 
-  .input-bar input:focus{
-    border: 4px solid #087d87;
-    outline: none;
-  }
-    .input-bar input{
-      width: 90%;
-    margin-top: -18px;
-    height: 50px;
-    border-radius: 5px;
-    border: 2px solid black;
-    box-sizing: border-box;
-    padding-left: 10px;
-    }
-    .input-bar{
-      display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
-    margin-top: 16px;
-    }
-    #input-boxes{
-      margin-top: 35px;
-    font-size: 15px;
-    font-family: "Mulish", sans-serif;
-    font-weight: 400;
-    }
-    #login-title{
-        font-size: 25px;
-        font-weight: 700;
-        margin-top: 38px;
-    }
+   #topic{
+    font-size: 22px;
+    position: absolute;
+    left: 4%;
+   }
     #main{
-      font-family: "Poppins", sans-serif;
-        display: flex;
-        justify-content: center;
+        font-family: "Poppins", sans-serif;
+    display: flex;
+    /* justify-content: space-around; */
+    font-family: "Prociono", serif;
+    margin-top: 20px;
     }
     #notefolio {
       font-family: "Outfit", sans-serif;
@@ -269,4 +288,5 @@ document.getElementById('login').addEventListener('click', checkingLoginValidati
       }
     }
   </style>
+
 </html>

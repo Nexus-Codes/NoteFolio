@@ -63,7 +63,7 @@
     <div id="notes-container">
         <div class="note" onclick="
         if (localStorage.getItem('login')) {
-           console.log('Redirecting to the notes...');
+            window.location.href = 'note1.html';
         }
         else {
             window.location.href = 'login.html';
@@ -71,9 +71,9 @@
         
         ">
             <img src="images/book-removebg-preview.png" alt="" class="book-logo" id="first-book-logo">
-            <p class="recent-notes">
-                 C MATHS 
-                <br> &nbsp;&nbsp;&nbsp;&nbsp; Mensuration <br>&nbsp;&nbsp;&nbsp;&nbsp; 12 Pages
+            <p class="recent-notes" id="scientific-learning">
+                 Science 
+                <br> &nbsp;&nbsp;&nbsp;&nbsp; Honey Bee <br>&nbsp;&nbsp;&nbsp;&nbsp; 12 Pages
              </p>
             <img src="images/pdf img.jpg" alt="" class="pdf-img">
         </div>
