@@ -36,9 +36,11 @@ function checkValueValidation() {
 
     if (document.getElementById('username-box').value.length < 3 || document.getElementById('pass-box').value.length < 3) {
         alert('Username and password must be at least 3 characters long.');
+        return;
     }
     else if(!document.getElementById('checkboxx').checked) {
         alert('Please accept the terms and conditions.')
+        return;
     }
     const userRef = ref(db, `Accounts/${username}`);
     
@@ -46,17 +48,21 @@ function checkValueValidation() {
         if (snapshot.exists()) {
             alert('Username already exists. Please choose a different username.');
         }
-        else{
+        else if (document.getElementById('pass-box').value.length > 3){
             set(userRef, {
                 Username: username,
                 Password: password
             })
             .then(() => {
                 alert('Account created sucessfully!');
+                window.location.href = 'login.html';
             })
             .catch(() => {
                 alert('Failed to check username availability.');
             });
+        }
+        else{
+            checkValueValidation();
         }
     })
 

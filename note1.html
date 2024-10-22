@@ -87,11 +87,19 @@
             <i class="fa-solid fa-thumbs-down" id="thumbs-down"></i>
           <p id="unhelpful-p">  Unhelpful</p></button>
     </div>
-   
-
  
-    
+    <script>
+
+      document.getElementById('download').addEventListener('click', () => {
+        const a = document.createElement('a');
+        a.href = "PDFS/computer.pdf";
+        a.download = "computer.pdf";
+        a.click();
+      })
+      
+    </script>
 <style>
+  
     .fa-solid{
         color: #989494;
     }
@@ -211,6 +219,7 @@ const db = getDatabase();
  
 
 function helpfulBtnClick() { 
+    
     document.getElementById('helpful').style.backgroundColor = '#635e00';
     document.getElementById('helpful').style.color = 'white';
     document.getElementById('unhelpful').style.backgroundColor = '#f0ededfb';
@@ -228,6 +237,7 @@ function unhelpfulBtnClick() {
     document.getElementById('helpful').style.backgroundColor = '#f0ededfb';
     document.getElementById('helpful').style.color = 'black';
     document.getElementById('thumbs-up').style.color = '#989494';
+    document.getElementById('thumbs-down').style.color = 'white';
 }
 
 document.getElementById('unhelpful').addEventListener('click', unhelpfulBtnClick);
