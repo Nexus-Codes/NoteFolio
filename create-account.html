@@ -54,7 +54,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prociono&display=swap" rel="stylesheet">
 <body>
     <nav>
       <div id="left">
@@ -67,6 +69,38 @@
         <p id="login-title">Create your account</p>
 
     </div>
+    <div id="invalid-container">
+      <span id="invalid-top"> Invalid username or password. </span> <span id="invalid-down"> Please try again</span>
+     </div>
+     <style>
+       #invalid-top{font-size: 15px;
+     font-family: "Outfit", sans-serif;
+     font-weight: 600;}
+       #invalid-down{
+         font-family: "Outfit", sans-serif;
+     font-weight: 400;
+     font-size: 13px;
+       }
+       /* #invalid-top{
+         display: inline;
+       } */
+       #invalid-container{
+         border: 3px solid #f19d8b;
+     height: 48px;
+     width: 90%;
+     display: flex;
+    justify-content: center; 
+    align-items: center; 
+     margin: auto;
+     border-radius: 3px;
+     position: relative;
+     top: 24px;
+      display: none; 
+     background-color: #ffece8;
+     flex-direction: column;
+     text-align: center;
+       }
+     </style>
         <div id="input-boxes">
           <div class="input-bar">
             <label for="username">Username</label>  

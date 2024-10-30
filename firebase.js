@@ -35,18 +35,24 @@ function checkValueValidation() {
     const password = document.getElementById('pass-box').value;
 
     if (document.getElementById('username-box').value.length < 3 || document.getElementById('pass-box').value.length < 3) {
-        alert('Username and password must be at least 3 characters long.');
+        document.getElementById('invalid-down').innerHTML = 'Username and Password must be atleast 3 characters long';
+        document.getElementById('invalid-top').style.display = 'none';
+        document.getElementById('invalid-container').style.display = 'flex';
         return;
     }
     else if(!document.getElementById('checkboxx').checked) {
-        alert('Please accept the terms and conditions.')
+        document.getElementById('invalid-down').innerHTML = 'Please accept the terms and conditions';
+        document.getElementById('invalid-top').style.display = 'none';
+        document.getElementById('invalid-container').style.display = 'flex';
         return;
     }
     const userRef = ref(db, `Accounts/${username}`);
     
     get(userRef).then((snapshot) => {
         if (snapshot.exists()) {
-            alert('Username already exists. Please choose a different username.');
+            document.getElementById('invalid-down').innerHTML = 'Username already exist. Choose a different username';
+            document.getElementById('invalid-top').style.display = 'none';
+            document.getElementById('invalid-container').style.display = 'flex';
         }
         else if (document.getElementById('pass-box').value.length > 3){
             set(userRef, {
@@ -54,11 +60,21 @@ function checkValueValidation() {
                 Password: password
             })
             .then(() => {
-                alert('Account created sucessfully!');
+        document.getElementById('invalid-container').style.display = 'flex';
+        document.getElementById('invalid-top').innerHTML = 'Account Created Sucessfully';
+            document.getElementById('invalid-down').style.display = 'none';
+            document.getElementById('invalid-container').style.backgroundColor = 'rgb(157 255 90)';
+            document.getElementById('invalid-container').style.border = 'none';
+
+            setTimeout(() => {
                 window.location.href = 'login.html';
+            }, 2000);
+            
             })
             .catch(() => {
-                alert('Failed to check username availability.');
+                document.getElementById('invalid-down').innerHTML = 'Failed to Create account';
+            document.getElementById('invalid-top').style.display = 'none';
+            document.getElementById('invalid-container').style.display = 'flex';
             });
         }
         else{

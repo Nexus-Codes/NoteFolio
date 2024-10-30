@@ -66,6 +66,37 @@
         <p id="login-title">Log into NoteFolio</p>
 
     </div>
+    <div id="invalid-container">
+     <span id="invalid-top"> Invalid username or password. </span> <span id="invalid-down"> Please try again</span>
+    </div>
+    <style>
+      #invalid-top{font-size: 15px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;}
+      #invalid-down{
+        font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+      }
+      /* #invalid-top{
+        display: inline;
+      } */
+      #invalid-container{
+        border: 3px solid #f19d8b;
+    height: 48px;
+    width: 90%;
+    display: flex;
+   justify-content: center; 
+   align-items: center; 
+    margin: auto;
+    border-radius: 3px;
+    position: relative;
+    top: 24px;
+    display: none;
+    background-color: #ffece8;
+    flex-direction: column;
+      }
+    </style>
         <div id="input-boxes">
           <div class="input-bar">
             <label for="username">Username</label>  
@@ -134,11 +165,11 @@ const userRef = ref(db, `Accounts/${username}`);
             localStorage.setItem('login', 'true');
           }
             else{
-            alert('Incorrect Password!');
+              document.getElementById('invalid-container').style.display = 'flex';
           }
         }
     else{
-      alert('Incorrect Username!')
+      document.getElementById('invalid-container').style.display = 'flex';
     }
       })
     }
