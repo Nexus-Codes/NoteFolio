@@ -161,7 +161,7 @@ const userRef = ref(db, `Accounts/${username}`);
           const userData = snapshot.val();
           console.log("User Data:", userData);
             if (userData.Password === password) {
-            alert('Login Sucessfull!');
+            window.location.href = 'index.html';
             localStorage.setItem('login', 'true');
           }
             else{

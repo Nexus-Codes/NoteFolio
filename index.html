@@ -1,67 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NoteFolio</title>
-</head>
-<link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
     href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"
-    rel="stylesheet">
-<link rel="shortcut icon" href="images/toplogo1.png" type="image/x-icon">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    rel="stylesheet"
+  />
+  <link rel="shortcut icon" href="images/toplogo1.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
 
-<body>
+  <body>
     <nav>
+      <div id="left">
+        <img src="images/logo.jpg" alt="img" id="logo-n" />
+        <p id="notefolio">NoteFolio</p>
+      </div>
+      <input
+        type="text"
+        id="mid-searchbar"
+        placeholder="Search for notes, assignments or books"
+      />
+      <i class="fas fa-search search-icon"></i>
+      <i class="fas fa-bars hamburger-icon" id="threedots"></i>
 
-        <div id="left">
-            <img src="images/logo.jpg" alt="img" id="logo-n">
-            <p id="notefolio"> NoteFolio</p>
-        </div>
-        <input type="text" id="mid-searchbar" placeholder="Search for notes, assignments or books">
-        <i class="fas fa-search search-icon"></i>
-        <i class="fas fa-bars hamburger-icon" id="threedots"></i>
-
-        <button id="signin">Sign in</button>
+      <button id="signin">Sign in</button>
     </nav>
 
     <div id="main">
-        <p>Grow Smarter Together</p>
-        <img src="underlineImg.png" alt="#">
+      <p>Grow Smarter Together</p>
+      <img src="underlineImg.png" alt="#" />
     </div>
     <div id="main2">
-        <input type="text">
-        <i class="fa fa-search"></i>
-
+      <input type="text" />
+      <i class="fa fa-search"></i>
     </div>
     <div id="searchbtn">
-        <button id="search" onclick="
+      <button
+        id="search"
+        onclick="
             localStorage.removeItem('login');
-            ">Search</button>
+            "
+      >
+        Search
+      </button>
     </div>
-    <br>
+    <br />
     <p id="recent-notes">Recent Notes</p>
     <div id="notes-container">
-        <div class="note" onclick="
+      <div
+        class="note"
+        onclick="
         if (localStorage.getItem('login')) {
             window.location.href = 'note1.html';
         }
@@ -69,54 +95,83 @@
             window.location.href = 'login.html';
         }
         
-        ">
-            <img src="images/book-removebg-preview.png" alt="" class="book-logo" id="first-book-logo">
-            <p class="recent-notes" id="scientific-learning">
-                 Science 
-                <br> &nbsp;&nbsp;&nbsp;&nbsp; Honey Bee <br>&nbsp;&nbsp;&nbsp;&nbsp; 12 Pages
-             </p>
-            <img src="images/pdf img.jpg" alt="" class="pdf-img">
-        </div>
-        
-        <div class="note note2">
-            <img src="images/book-removebg-preview.png" alt="" class="book-logo"> 
-            <p class="recent-notes">Science <br>&nbsp;&nbsp;&nbsp;&nbsp; heridity <br> &nbsp;&nbsp;&nbsp;&nbsp;20 Pages</p>
-            <img src="images/pdf img.jpg" alt="" class="pdf-img">
-        </div>
-        
-        <div class="note">
-            <img src="images/book-removebg-preview.png" alt="" class="book-logo">
-            <p class="recent-notes">Computer <br>&nbsp;&nbsp;&nbsp;&nbsp; C++ <br> &nbsp;&nbsp;&nbsp;&nbsp;2 Pages</p>
-            <img src="images/pdf img.jpg" alt="" class="pdf-img">
-        </div>
-        <div class="note">
-            <img src="images/book-removebg-preview.png" alt="" class="book-logo">
-            <p class="recent-notes">Nepali <br>&nbsp;&nbsp;&nbsp;&nbsp; Chapter 6 <br> &nbsp;&nbsp;&nbsp;&nbsp;11 Pages</p>
-            <img src="images/pdf img.jpg" alt="" class="pdf-img">
-        </div>
-        <div class="note">
-            <img src="images/book-removebg-preview.png" alt="" class="book-logo">
-            <p class="recent-notes">English <br>&nbsp;&nbsp;&nbsp;&nbsp; Unit 2 <br> &nbsp;&nbsp;&nbsp;&nbsp;12 Pages</p>
-            <img src="images/pdf img.jpg" alt="" class="pdf-img">
-        </div>
-        <div class="note">
-            <img src="images/book-removebg-preview.png" alt="" class="book-logo" id="book-logo2">
-            <p class="recent-notes">O MATHS <br>&nbsp;&nbsp;&nbsp;&nbsp; Trigonometry <br> &nbsp;&nbsp;&nbsp;&nbsp;34 Pages</p>
-            <img src="images/pdf img.jpg" alt="" class="pdf-img">
-        </div>
-        
+        "
+      >
+        <img
+          src="images/book-removebg-preview.png"
+          alt=""
+          class="book-logo"
+          id="first-book-logo"
+        />
+        <p class="recent-notes" id="scientific-learning">
+          Science
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp; Honey Bee <br />&nbsp;&nbsp;&nbsp;&nbsp; 12
+          Pages
+        </p>
+        <img src="images/pdf img.jpg" alt="" class="pdf-img" />
+      </div>
+
+      <div class="note note2">
+        <img src="images/book-removebg-preview.png" alt="" class="book-logo" />
+        <p class="recent-notes">
+          Science <br />&nbsp;&nbsp;&nbsp;&nbsp; heridity <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;20 Pages
+        </p>
+        <img src="images/pdf img.jpg" alt="" class="pdf-img" />
+      </div>
+
+      <div class="note">
+        <img src="images/book-removebg-preview.png" alt="" class="book-logo" />
+        <p class="recent-notes">
+          Computer <br />&nbsp;&nbsp;&nbsp;&nbsp; C++ <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;2 Pages
+        </p>
+        <img src="images/pdf img.jpg" alt="" class="pdf-img" />
+      </div>
+      <div class="note">
+        <img src="images/book-removebg-preview.png" alt="" class="book-logo" />
+        <p class="recent-notes">
+          Nepali <br />&nbsp;&nbsp;&nbsp;&nbsp; Chapter 6 <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;11 Pages
+        </p>
+        <img src="images/pdf img.jpg" alt="" class="pdf-img" />
+      </div>
+      <div class="note">
+        <img src="images/book-removebg-preview.png" alt="" class="book-logo" />
+        <p class="recent-notes">
+          English <br />&nbsp;&nbsp;&nbsp;&nbsp; Unit 2 <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;12 Pages
+        </p>
+        <img src="images/pdf img.jpg" alt="" class="pdf-img" />
+      </div>
+      <div class="note">
+        <img
+          src="images/book-removebg-preview.png"
+          alt=""
+          class="book-logo"
+          id="book-logo2"
+        />
+        <p class="recent-notes">
+          O MATHS <br />&nbsp;&nbsp;&nbsp;&nbsp; Trigonometry <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;34 Pages
+        </p>
+        <img src="images/pdf img.jpg" alt="" class="pdf-img" />
+      </div>
     </div>
 
     <div id="main3">
-        <p id="notefolio1">NoteFolio</p>
-        <p id="description">NoteFolio is designed to helps students access and share study notes effortlessly. Whether you want assignment notes, PDFS of books or want a quick revision, this platform is for you. </p>
-  <hr id="hr1">
+      <p id="notefolio1">NoteFolio</p>
+      <p id="description">
+        NoteFolio is designed to helps students access and share study notes
+        effortlessly. Whether you want assignment notes, PDFS of books or want a
+        quick revision, this platform is for you.
+      </p>
+      <hr id="hr1" />
     </div>
 
-
-    <div id="footer"><center> All Rights Reserved</center></div>
-    <br>
-</body>
-<link rel="stylesheet" href="mediaqueries/indexquery.css">
-
+    <div id="footer"><center>All Rights Reserved</center></div>
+    <br />
+  </body>
+  <link rel="stylesheet" href="mediaqueries/indexquery.css" />
 </html>
