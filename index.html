@@ -46,8 +46,28 @@
     href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet"
   />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <body>
+
+<div id="full-navbar">
+  <div id="nav-container">
+    <p id="navbar-notefolio">NoteFolio</p> <p id="cross" onclick="
+      document.getElementById('full-navbar').style.display = 'none';
+      ">&#10006;</p> </div>
+<div id="list-container">
+    <ul>
+         <li id="home-li"><a href=""> Home</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Features</a></li>
+        <li><a href="">FAQs</a></li>
+        <li><a href="login.html">Login</a></li>
+    </ul></div>
+</div>
+
+
     <nav>
       <div id="left">
         <img src="images/logo.jpg" alt="img" id="logo-n" />
@@ -174,4 +194,16 @@
     <br />
   </body>
   <link rel="stylesheet" href="mediaqueries/indexquery.css" />
+  <script>
+
+    document.getElementById('threedots').addEventListener('click', () => {
+
+    
+     document.getElementById('full-navbar').style.display = 'flex';
+     document.getElementById('full-navbar').style.justifyContent = 'flex-start';
+     document.getElementById('full-navbar').style.flexDirection = 'column';
+
+   
+    })
+  </script>
 </html>

@@ -1,31 +1,26 @@
 
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+import { getDatabase, get, set, ref } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyB5waNYtvmuw7UnmHoXSMeH5M_34oKrDZo",
-    authDomain: "fir-login-5c5e0.firebaseapp.com",
-    projectId: "fir-login-5c5e0",
-    storageBucket: "fir-login-5c5e0.appspot.com",
-    messagingSenderId: "574480072693",
-    appId: "1:574480072693:web:847821173d4d6e4048eabc",
+  apiKey: "AIzaSyA0q2rJGQYvWLs4JPcoy7ki9kvoIqJJtPQ",
+  authDomain: "notefolio-4eacc.firebaseapp.com",
+  databaseURL: "https://notefolio-4eacc-default-rtdb.firebaseio.com",
+  projectId: "notefolio-4eacc",
+  storageBucket: "notefolio-4eacc.firebasestorage.app",
+  messagingSenderId: "372329554135",
+  appId: "1:372329554135:web:0675a2880a1978e23d1092"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-import {
-    getDatabase,
-    ref,
-    set,
-    child,
-    update,
-    remove,
-    get
-} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
+
+
 
 const db = getDatabase();
 
