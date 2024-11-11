@@ -64,7 +64,22 @@
         <li><a href="">Features</a></li>
         <li><a href="">FAQs</a></li>
         <li><a href="login.html">Login</a></li>
-    </ul></div>
+        <li onclick="
+        if ( localStorage.getItem('username') === 'Sarthak977'){
+          window.location.href = 'admin.html';
+        }
+        else{
+          document.getElementById('admin-denied').style.display = 'block';
+          setTimeout(()=>{
+            document.getElementById('admin-denied').style.display = 'none';
+          }, 1000);
+        }
+        ">Admin Space</li>
+  
+  <li id="admin-denied">Permission denied!</li>  </ul>
+  </div>
+
+      <!-- <p id="admin-space"><a href="admin.html">Admin Panel</a></p> -->
 </div>
 
 
@@ -81,7 +96,9 @@
       <i class="fas fa-search search-icon"></i>
       <i class="fas fa-bars hamburger-icon" id="threedots"></i>
 
-      <button id="signin">Sign in</button>
+      <button id="signin" onclick="
+      window.location.href = 'admin.html';
+      ">Sign in</button>
     </nav>
 
     <div id="main">

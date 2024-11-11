@@ -1,7 +1,7 @@
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-import { getDatabase, get, set, ref } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
+import { getDatabase, get, set, ref, update} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -24,6 +24,7 @@ const app = initializeApp(firebaseConfig);
 
 const db = getDatabase();
 
+
 function checkValueValidation() {
 
     const username = document.getElementById('username-box').value;
@@ -42,7 +43,9 @@ function checkValueValidation() {
         return;
     }
     const userRef = ref(db, `Accounts/${username}`);
-    
+    const statistics = ref(db, `Stats/`);
+    let totalAccounts;
+
     get(userRef).then((snapshot) => {
         if (snapshot.exists()) {
             document.getElementById('invalid-down').innerHTML = 'Username already exist. Choose a different username';
@@ -54,6 +57,20 @@ function checkValueValidation() {
                 Username: username,
                 Password: password
             })
+            get(statistics).then((snapshot) => {
+                if (snapshot.exists()) {
+                    totalAccounts = snapshot.val().Total_Accounts;
+                    update(statistics, {
+                        Total_Accounts: Number(totalAccounts + 1)
+                   })
+                }
+                else{
+                    set(statistics, {
+                        Total_Accounts: 1
+                    })
+                }
+            })
+            
             .then(() => {
         document.getElementById('invalid-container').style.display = 'flex';
         document.getElementById('invalid-top').innerHTML = 'Account Created Sucessfully';

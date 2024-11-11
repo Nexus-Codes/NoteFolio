@@ -352,3 +352,21 @@ li{
         position: relative;
         left: -19px;
 }
+#admin-space{
+    font-size: 17px;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: underline;
+}
+#admin-space a{
+    text-decoration: none;
+ 
+    
+}
+#admin-denied{
+    font-size: 13px;
+    text-align: center;
+    color: red;
+    display: none;
+}
